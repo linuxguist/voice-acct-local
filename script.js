@@ -6,7 +6,7 @@ function doFunction(testxi){
     // Create an array of audio file URLs 
     // const audioFiles = ['audio1.mp3', 'audio2.mp3', 'audio3.mp3']; 
 
-    const audioFiles = Array.from(testxi.toString().replaceAll('.', '_'), (x) => 'region/' + x + '.mp3')
+    const audioFiles = Array.from(testxi.toString().replaceAll('.', '-'), (x) => 'region/' + x + '.mp3')
      
     // Create an array to store audio elements 
     const audioElements = []; 
@@ -572,7 +572,7 @@ document.onkeydown = function (e) {
   
 } else if (e.key == ".") {
   event.preventDefault();
-   document.getElementById('_').play(); 
+   document.getElementById('-').play(); 
   document.getElementById("period").click();
 } else if (e.key == "+") {
   event.preventDefault();
