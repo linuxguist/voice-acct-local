@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YDZDMMCG9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8YDZDMMCG9');
+</script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Voice Accounting</title>
+  <link rel="stylesheet" href="./style.css">
+  
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <div id="container" class="container">
+    <div>
+      <h1>Voice Accounting</h1>
+    </div>
+    <div id="expression">
+      
+    </div>
+    <div id="standard-buttons" class="container-fluid">
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-7" class="btn num" title="7">7</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-8"  class="btn num" title="8">8</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-9"  class="btn num" title="9">9</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-divide" class="btn" title="Divide">÷</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="clear" class="btn button-orange" title="Clear all">AC</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-4"  class="btn num" title="4">4</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-5"  class="btn num" title="5">5</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-6"  class="btn num" title="6">6</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-multiply" class="btn" title="Multiply">x</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="delete" class="btn button-khaki" title="Delete">DEL</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-1"  class="btn num" title="1">1</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-2"  class="btn num" title="2">2</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-3"  class="btn num" title="3">3</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-subtract" class="btn" title="Subtract">-</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="equals" class="btn button-blue" title="Equals">=</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="period" class="btn" title="Decimal point">.</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-0" class="btn num" title="0">0</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-negate" class="btn" title="Negate">(-)</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-add" class="btn" title="Add">+</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="toggle-advanced" class="btn button-off button-blue" title="Toggle advanced panel"><span class="glyphicon glyphicon-triangle-bottom"></span></button>
+        </div>
+      </div>
+    </div>
+    <div id="calc-history">
+      <span>Accounting History</span>
+      <hr>
+      <div id="maintenance">
+
+      <button id="hcopy" class="" title="Copy History To Clipboard" style="color:black;" onclick="CopyToClipboard('calc-history-box')">Copy</button>  
+      <button id="hclear" class="" title="Clear History" style="color:black;" onclick="ClearHistory('calc-history-box')">Clear</button>  
+      </div>  
+      <hr>
+      <br>
+      <div id="calc-history-box"></div>
+              
+    </div>
+    <div id="advanced-buttons" class="container-fluid">
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-power" class="btn" title="Exponentiate">^</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-pi" class="btn num" title="Pi">π</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-sin" class="btn" title="Inverse sine">asin</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-cos" class="btn" title="Inverse cosine">acos</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-tan" class="btn" title="Inverse tangent">atan</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-square-root" class="btn" title="Square root">√</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-nth-root" class="btn" title="nth root">x*√</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-sin" class="btn" title="Sine">sin</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-cos" class="btn" title="Cosine">cos</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-tan" class="btn" title="Tangent">tan</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-log" class="btn" title="Log base 10">log</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-natural-log" class="btn" title="Natural log (base e)">ln</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-e" class="btn" title="Exponential function">e^x</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="bracket-left" class="btn" title="Open bracket">(</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="bracket-right" class="btn" title="Closed bracket">)</button>
+        </div>
+      </div>
+    </div>
+
+        <center><h4>Hint: Just Type from the Numeric Keypad itself &<br>Also Adjust Speaker Volume to the desired level.<br><br>Can attach a USB Keyboard with Numeric Keypad as well.<br><br>Pressing esc key will now clear the input field fully.<br>Pressing Backspace key will clear input, one by one.<br><br>For typing Plus & Multiply Signs from Main Keyboard, use Shift+Plus (twice) & Shift+Multiply(twice), the second key is repeated twice here.</h4></center>
+
+    <div id="footer">
+      <p></p>
+    </div>
+  </div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  
+<script src="./script.js"></script>
+
+
+
+<script type="text/javascript">
+function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    alert("Text has been copied to clipboard")
+  }
+}    
+</script>
+
+<script type="text/javascript">
+function ClearHistory(containerid) {
+// containerid.innerHTML="";
+localStorage.clear();
+window.location.reload();
+}
+</script>
+
+<!--
+<audio id='0' preload='auto' controls style='display:none'>   <source src='region/0.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='1' preload='auto' controls style='display:none'>   <source src='region/1.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='2' preload='auto' controls style='display:none'>   <source src='region/2.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='3' preload='auto' controls style='display:none'>   <source src='region/3.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='4' preload='auto' controls style='display:none'>   <source src='region/4.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='5' preload='auto' controls style='display:none'>   <source src='region/5.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='6' preload='auto' controls style='display:none'>   <source src='region/6.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='7' preload='auto' controls style='display:none'>   <source src='region/7.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='8' preload='auto' controls style='display:none'>   <source src='region/8.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='9' preload='auto' controls style='display:none'>   <source src='region/9.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='=' preload='auto' controls style='display:none'>   <source src='region/=.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='B' preload='auto' controls style='display:none'>   <source src='region/B.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='D' preload='auto' controls style='display:none'>   <source src='region/D.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='E' preload='auto' controls style='display:none'>   <source src='region/E.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='-' preload='auto' controls style='display:none'>   <source src='region/-.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='MU' preload='auto' controls style='display:none'>   <source src='region/MU.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='NL' preload='auto' controls style='display:none'>   <source src='region/NL.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='P' preload='auto' controls style='display:none'>   <source src='region/P.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='R' preload='auto' controls style='display:none'>   <source src='region/R.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+<audio id='`' preload='auto' controls style='display:none'>   <source src='region/`.mp3' type='audio/mpeg'> Your browser does not support the audio element. </audio>
+-->
+
+
+<script src="https://cdn.jsdelivr.net/jquery/2.2.1/jquery.min.js"></script>
+
+<script src="./moment-with-locales.min.js"></script>
+
+</body>
+</html>
