@@ -1,0 +1,146 @@
+body {
+  background-color: #121212;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  box-shadow: 0px 5px 10px #222222;
+  font-size:18px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.button-row div {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 5px;
+}
+
+.button-row .btn {
+  width: 60px;
+  height: 60px;
+  background-color: #636363;
+}
+
+.button-row .btn:hover {
+  background-color: #858585;
+  color: white !important;
+}
+
+.button-orange {
+  background-color: #FF8400 !important;
+}
+
+.button-orange:hover {
+  background-color: #FFA647 !important;
+}
+
+.button-blue {
+  background-color: #0099FF !important;
+}
+
+.button-blue:hover {
+  background-color: #33ADFF !important;
+}
+
+.button-off {
+  background-color: aquamarine !important;
+  color: black !important;  
+}
+
+.button-khaki {
+  background-color: khaki !important;
+  color: black !important;
+}
+
+.calc-history-eq {
+  color: #B0B0B0;
+  cursor: pointer;
+}
+
+#container {
+  width: 600px;
+  background-color: #2E2E2E;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 4%;
+}
+
+#expression {
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: right;
+  background-color: #636363;
+  border-radius: 5px;
+  font-size: 30px;
+  box-shadow: 0px 5px 10px #444444 inset;
+}
+
+#standard-buttons {
+  display: inline-block;
+  margin-left: -20px;
+  margin-bottom: 10px;
+}
+
+#advanced-buttons {
+  display: inline-block;
+  display: none;
+  margin-left: -20px;
+}
+
+#toggle-advanced:hover {
+  background-color: #858585 !important;
+}
+
+#toggle-advanced span {
+  pointer-events: none;
+}
+
+#calc-history {
+  float: right;
+  width: 200px;
+  height: 270px;
+  background-color: #636363;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px #444444 inset;
+  overflow:auto;
+  font-size:18px;
+}
+
+#calc-history-box {
+  width: 180px !important;
+  height: 220px !important;
+  resize: none;
+  overflow: auto;
+  font-size:18px;  
+}
+
+#calc-history hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#footer {
+  background-color: #262626;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-top: 15px;
+  padding: 10px;
+  padding-bottom: 1px;
+  color: #636363;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
